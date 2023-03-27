@@ -10,7 +10,7 @@ void setup(){
 void loop(){
     int value = analogRead(ldr);
     Serial.println(value);
-    if (value >= 3000) {
+    if (value >= 1000) {
         digitalWrite(led, HIGH);
     }
     else {
