@@ -1,19 +1,24 @@
-int pin_ir = 2;
+const int buzzerPin = 12;
+const int ledPin = 13;
+const int irSensorPin = 14;
 
-void setup(){
-    Serial.begin(9600);
-    pinMode(pin_ir, INPUT);
+void setup() {
+  Serial.begin(115200);
+
+  pinMode(buzzerPin, OUTPUT);
+  pinMode(ledPin, OUTPUT);
+  pinMode(irSensorPin, INPUT);
 }
-void loop(){
-    int value = digitalRead(pin_ir);
 
-    Serial.println("fire sensor");
-    Serial.println(value);
+void loop() {
+  int irValue = digitalRead(irSensorPin);
+  if (irValue == HIGH) {
+    digitalWrite(buzzerPin, HIGH);
+    digitalWrite(ledPin, HIGH);
+  } else {
+    digitalWrite(buzzerPin, LOW);
+    digitalWrite(ledPin, LOW);
+  }
 
-    if (digitalRead(pin_ir) == LOW) {
-        Serial.println("ada Api");
-    } else {
-        Serial.println("tidak ada api");
-    }
-    delay(2000);
+  delay(1000);
 }
