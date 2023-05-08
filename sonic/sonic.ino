@@ -26,19 +26,18 @@ void loop() {
 
   Serial.print("Acceleration: ");
   Serial.print(a.acceleration.x);
-  Serial.print(", ");
+  Serial.print(" x, ");
   Serial.print(a.acceleration.y);
-  Serial.print(", ");
+  Serial.print(" y, ");
   Serial.print(a.acceleration.z);
-  Serial.print(" m/s^2\t");
-
-  Serial.print("Rotation: ");
+  Serial.print(" z, m/s^2\t");
+  Serial.print("     Rotation: ");
   Serial.print(g.gyro.x);
-  Serial.print(", ");
+  Serial.print(" x, ");
   Serial.print(g.gyro.y);
-  Serial.print(", ");
+  Serial.print(" y, ");
   Serial.print(g.gyro.z);
-  Serial.print(" rad/s");
+  Serial.print(" z, rad/s");
 
   Serial.println();
   delay(100);

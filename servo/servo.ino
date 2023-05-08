@@ -1,3 +1,6 @@
+#include <DHT_U.h>
+#include <DHT.h>
+
 #include <ESP32Servo.h>
 
 Servo myservo;
@@ -11,10 +14,10 @@ void setup() {
 }
 
 void loop() {
-    int value = analogRead(potpin);
-    Serial.println(value);
-    n = map(value, 0, 4095, 0, 180);
-    Serial.println(n);
-    myservo.write(n); 
+    // int value = analogRead(potpin);
+    // Serial.println(value);
+    // n = map(value, 0, 4095, 0, 180);
+    // Serial.println(n);
+    myservo.write(90); 
     // sets the servo position to 90 degrees
 }
