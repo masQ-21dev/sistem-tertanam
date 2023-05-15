@@ -1,15 +1,13 @@
-int relay = 2;
+#include "Relay.h"
 
-void setup(){
-    pinMode(relay, INPUT);
-    Serial.begin(9600);
-    }
+Relay light(12, true); // constructor receives (pin, isNormallyOpen) true = Normally Open, false = Normally Closed
 
-void loop(){
-    digitalWrite(relay, HIGH);
-    Serial.print("hidup");
-    delay(10000);
-    digitalWrite(relay, LOW);
-    delay(10000);
+void setup() {
+	light.begin(); // inicializes the pin
+}
 
+void loop() {
+	light.turnOff(); //turns relay off
+	light.turnOn();  //turns relay on
+	// bool isLightOn = light.getState(); //returns a bool, true = on, false = off
 }
