@@ -8,7 +8,7 @@ void setup()
   lcd.init();                      // initialize the LCD
   lcd.backlight();                 // turn on the backlight
   lcd.setCursor(0,0);              // set the cursor to the top-left corner
-  lcd.print("Wella");      // print "Hello, World!" to the LCD
+  lcd.print("coba");      // print "Hello, World!" to the LCD
 }
 
 void loop()

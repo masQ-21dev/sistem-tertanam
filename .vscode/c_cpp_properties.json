@@ -219,7 +219,7 @@
                 "C:\\Users\\mqoma\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.9\\tools\\sdk\\esp32\\dio_qspi\\include",
                 "C:\\Users\\mqoma\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.9\\cores\\esp32",
                 "C:\\Users\\mqoma\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.9\\variants\\doitESP32devkitV1",
-                "C:\\Users\\mqoma\\Documents\\Arduino\\libraries\\Relay\\src",
+                "C:\\Users\\mqoma\\Documents\\Arduino\\libraries\\ESP32Servo\\src",
                 "c:\\users\\mqoma\\appdata\\local\\arduino15\\packages\\esp32\\tools\\xtensa-esp32-elf-gcc\\esp-2021r2-patch5-8.4.0\\xtensa-esp32-elf\\include\\c++\\8.4.0",
                 "c:\\users\\mqoma\\appdata\\local\\arduino15\\packages\\esp32\\tools\\xtensa-esp32-elf-gcc\\esp-2021r2-patch5-8.4.0\\xtensa-esp32-elf\\include\\c++\\8.4.0\\xtensa-esp32-elf",
                 "c:\\users\\mqoma\\appdata\\local\\arduino15\\packages\\esp32\\tools\\xtensa-esp32-elf-gcc\\esp-2021r2-patch5-8.4.0\\xtensa-esp32-elf\\include\\c++\\8.4.0\\backward",

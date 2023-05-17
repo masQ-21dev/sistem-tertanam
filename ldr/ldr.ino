@@ -1,20 +1,12 @@
-int ldr = 4;
-int led = 2;
+int ldr = 14;
+
 
 void setup(){
-    pinMode(ldr, INPUT);
-    pinMode(led, OUTPUT);
+    pinMode(ldr, INPUT);;
     Serial.begin(9600);
 }
 
 void loop(){
     int value = analogRead(ldr);
     Serial.println(value);
-    if (value >= 1000) {
-        digitalWrite(led, HIGH);
-    }
-    else {
-        digitalWrite(led, LOW);
-    }
-    delay(100);
 }

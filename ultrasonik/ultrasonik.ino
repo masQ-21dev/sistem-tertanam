@@ -1,29 +1,32 @@
-#define trigPin 26
-#define echoPin 25
-
-long duration;
-int distance;
+// Pin Trigger dan Echo pada sensor
+const int TRIGGER_PIN = 12;
+const int ECHO_PIN = 14;
 
 void setup() {
   Serial.begin(9600);
 
-  pinMode(trigPin, OUTPUT);
-  pinMode(echoPin, INPUT);
+  pinMode(TRIGGER_PIN, OUTPUT);
+  pinMode(ECHO_PIN, INPUT);
 }
 
 void loop() {
-  digitalWrite(trigPin, LOW);
+  // Mengirim sinyal ultrasonik
+  digitalWrite(TRIGGER_PIN, LOW);
   delayMicroseconds(2);
-  digitalWrite(trigPin, HIGH);
+  digitalWrite(TRIGGER_PIN, HIGH);
   delayMicroseconds(10);
-  digitalWrite(trigPin, LOW);
+  digitalWrite(TRIGGER_PIN, LOW);
 
-  duration = pulseIn(echoPin, HIGH);
+  // Menerima pantulan sinyal ultrasonik
+  unsigned long duration = pulseIn(ECHO_PIN, HIGH);
 
-  distance = duration * 0.034 / 2;
-  Serial.print("Distance: ");
+  // Menghitung jarak berdasarkan waktu pantulan
+  float distance = duration * 0.034 / 2;
+
+  // Menampilkan hasil ke Serial Monitor
+  Serial.print("Jarak: ");
   Serial.print(distance);
   Serial.println(" cm");
 
-  delay(500);
+  delay(500); // Waktu jeda antara pembacaan jarak
 }
